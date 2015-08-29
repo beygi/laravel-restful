@@ -15,5 +15,5 @@ you will be confirmed for creating new administrator user and done :)
 
 **usage**
 
-you can see swagger at ```http://localhost:8000/api-docs```
+you can see swagger interface at ```http://localhost:8000/api-docs```
 and admin area at ```http://localhost:8000/admin/login```
