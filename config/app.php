@@ -147,7 +147,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
     	SleepingOwl\Admin\AdminServiceProvider::class,
-	Illuminate\Html\HtmlServiceProvider::class
+	Collective\Html\HtmlServiceProvider::class
+
 
     ],
 
@@ -207,8 +208,8 @@ return [
 	'FormItem'          => SleepingOwl\Admin\Models\Form\FormItem::class,
 	'ModelItem'         => SleepingOwl\Admin\Models\ModelItem::class,
 
-	'Form'      => Illuminate\Html\FormFacade::class,
-	'Html'      => Illuminate\Html\HtmlFacade::class
+	'Form' => 'Collective\Html\FormFacade',
+	'Html' => 'Collective\Html\HtmlFacade',
 	
     ],
 
