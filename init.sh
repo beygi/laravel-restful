@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "installing dependencies using composer"
-composer update
+composer install
 echo "publish vendor files"
 php artisan vendor:publish
 echo "create .env file ..."
