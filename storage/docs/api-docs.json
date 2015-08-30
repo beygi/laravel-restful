@@ -1,14 +1,103 @@
 {
-    "apiVersion": "1.0",
-    "swaggerVersion": "1.2",
-    "apis": [
-        {
-            "path": "/todo",
-            "description": "Todo operations"
+    "swagger": "2.0",
+    "info": {
+        "title": "My API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/user/authenticate": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Authenticate user",
+                "description": "",
+                "operationId": "authUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "email address",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "password",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
         },
-        {
-            "path": "/user",
-            "description": "User operations"
+        "/api/user": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Get user object",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "getUser",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Create user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "createUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email address",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "Password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "User's Name",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
         }
-    ]
+    },
+    "definitions": {
+
+    }
 }

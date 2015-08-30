@@ -8,14 +8,6 @@ use App\Http\Controllers\Controller;
 use App\Todo;
 use JWTAuth;
 
-
-/**
- * @SWG\Resource(
- * 	apiVersion="1.0",
- *	description="Todo operations",
- *	produces="['application/json']"
- * )
- */
 class TodoController extends Controller
 {
     public function __construct()
@@ -31,15 +23,6 @@ class TodoController extends Controller
         return $todos;
     }
 
-	/**
-	 * @SWG\Api(
-	 * 	path="/todo",
-	 *      @SWG\Operation(
-	 *      	method="GET",
-	 *      	summary="Fetch Todos"
-	 *   	)
-	 * )
-	 */
     public function store(Request $request)
     {
         $user = JWTAuth::parseToken()->authenticate();
